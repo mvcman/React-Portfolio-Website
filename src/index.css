@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
 }
+
 body {
+  background-image: linear-gradient(to right bottom, #00f260, #0575e6);
+  background-attachment: fixed;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -11,8 +14,119 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+a {
+  text-decoration: none;
+  color: #354538;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  padding-top: 50px;
+}
+.row {
+  height: 90vh;
+}
+.sidebar {
+  background-color: #fff;
+  height: 100%;
+  border-radius: 20px;
+  padding: 25px 15px;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+.app__main-content {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px 15px;
+  box-shadow: 0 0 10px #000;
+}
+
+.sidebar__avatar {
+  height: 110px;
+  width: 110px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  /* text-align: center; */
+}
+
+.sidebar__icon {
+  width: 25px;
+  height: 25px;
+  color: #00f260;
+  margin-right: 5px;
+}
+
+.sidebar__name {
+  font-family: Kaushan Script;
+  margin: 10px 0;
+  color: #0575e6;
+  font-size: 1.5rem;
+}
+
+.sidebar__name > span {
+  color: #00f260;
+}
+
+.sidebar__item {
+  margin-bottom: 3px;
+  padding-top: 3px;
+  height: 40px;
+  font-size: 1.05rem;
+}
+
+.sidebar__title {
+  background-color: #f1f1f1;
+  border-radius: 30px;
+}
+
+.sidebar__contact {
+  background-color: #dbdddf;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.sidebar__email {
+  border-radius: 30px;
+  color: #fff;
+  margin: 15px 25px 0;
+  background-image: linear-gradient(to right bottom, #00f260, #0575e6);
+  cursor: pointer;
+  padding: 5px 0;
+  transition: all 1s linear;
+}
+
+.sidebar__email:hover {
+  transform: scale(1.2);
+}
+
+.link {
+  text-decoration: none;
+  color: #354538;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .app__sidebar {
+    margin-bottom: 20px;
+  }
+
+  .app__main-content {
+    margin: 0 15px;
+  }
 }
