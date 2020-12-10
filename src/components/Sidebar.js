@@ -5,8 +5,12 @@ import { FiInstagram } from "react-icons/fi";
 import { AiFillPushpin } from "react-icons/ai";
 // import { FaAward } from "react-icons/fa";
 import { AiOutlineDownload } from "react-icons/ai";
+import file from "../assets/IAM-AWS.pdf";
 
 const Sidebar = () => {
+  const handleEmailme = () => {
+    window.open("mailto:mandar.waghe@udgama.com");
+  };
   return (
     <div className="sidebar">
       <img
@@ -18,7 +22,7 @@ const Sidebar = () => {
         Mandar <span>Waghe</span>
       </div>
       <div className="sidebar__item sidebar_title">Software Engineer</div>
-      <a href="" className="link">
+      <a href={file} download="resume.pdf" className="link">
         <div className="sidebar__item">
           <AiOutlineDownload className="sidebar__icon" /> Download Resume
         </div>
@@ -42,7 +46,9 @@ const Sidebar = () => {
         <div className="sidebar__item">mandar@gmail.com</div>
         <div className="sidebar_item">8549489943</div>
       </div>
-      <div className="sidebar__email">Email Me</div>
+      <div className="sidebar__email" onClick={handleEmailme}>
+        Email Me
+      </div>
     </div>
   );
 };
