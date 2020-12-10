@@ -152,11 +152,18 @@ code {
   cursor: pointer;
 }
 .navbar__item:hover {
+  text-decoration: none;
   color: #00f260;
   background: -webkit-linear-gradient(#00f260, #0575e6);
   background-clip: text;
   -webkit-background-clip: text;
   cursor: pointer;
+}
+.navbar__link {
+  text-decoration: none;
+}
+.navbar__link:hover {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
