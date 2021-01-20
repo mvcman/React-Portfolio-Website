@@ -14,6 +14,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(90deg, #00f260, #0575e6);
+}
 a {
   text-decoration: none;
   color: #354538;
@@ -29,11 +36,11 @@ code {
     monospace;
 }
 
-.container {
+.app__container {
   padding-top: 50px;
 }
-.row {
-  height: 90vh;
+.app__row {
+  height: 86vh;
 }
 
 /* sidebar */
@@ -166,6 +173,173 @@ code {
   text-decoration: none;
 }
 
+/* about  */
+.about {
+  padding: 20px;
+  margin: -35px;
+  /* overflow-y: scroll; */
+}
+
+.about__intro {
+  font-size: 1.1rem;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.about__container {
+  background-color: #dbdddf;
+  padding: 30px 20px;
+}
+
+.about__container > .row {
+  /* max-height: 300px; */
+  height: auto;
+  overflow: auto;
+}
+
+.about__heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: #354358;
+  margin-left: 10px;
+}
+.about__icon {
+  font-size: 40px;
+  color: #00f260;
+  /* color: red; */
+}
+
+/* skill card */
+
+.skill__card {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.skill__card__body {
+  margin-left: 15px;
+}
+.skill__card__title {
+  color: #354358;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.skill__card__content {
+  margin: 0;
+  color: #6e7e91;
+  font-size: 1rem;
+}
+
+/* Resume */
+.resume {
+  padding-top: 20px;
+}
+
+.resume-card__heading {
+  /* margin-left: 10px; */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #354538;
+}
+
+.resume-card__body {
+  margin-top: 10px;
+}
+.resume-card__title {
+  font-weight: 700;
+}
+
+.resume-card__details {
+  font-size: 0.9rem;
+  padding-top: 20px;
+}
+
+.resume-card__name {
+  font-size: 16px;
+}
+
+/* bar */
+
+.bar {
+  width: 90%;
+  background-color: #f1f2f3;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.bar__icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.bar__name {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.bar__wrapper {
+  display: flex;
+  background-image: linear-gradient(90deg, #00f260, #0575e6);
+  border-radius: 20px;
+  padding: 4px 14px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* projects */
+.projects {
+  height: 60vh;
+  padding-top: 30px;
+  overflow-y: auto;
+}
+
+.projectCard {
+}
+
+.projectCard__wrapper {
+  margin: 10px 0px;
+  width: 100%;
+  min-height: 160px;
+  height: 100%;
+}
+.projectCard__image {
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+  border: 1px solid green;
+  transition: 0.3s linear;
+}
+.projectCard__image:hover {
+  transform: scale(1.05);
+}
+
+.projectCard__title {
+  margin-top: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectCard__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.projects__navbar {
+  display: flex;
+}
+
+.projects__navbar > div {
+  margin: 0 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .app__sidebar {
     margin-bottom: 20px;
@@ -173,5 +347,15 @@ code {
 
   .app__main-content {
     margin: 0 15px;
+  }
+
+  .about {
+    padding: 5px;
+    margin: -20px;
+  }
+
+  .about__container > .row {
+    height: auto;
+    overflow: none;
   }
 }
